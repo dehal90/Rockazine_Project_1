@@ -11,3 +11,7 @@ an email gets sent to a Gmail account)product catalogue, articles page with comm
 contact form  and a static downloads page is included to demonstrate how static pages
 are created in the MVC architecture of Rails. Other than the pages that have been stated, 
 This project also includes pagination and images in the product catalogue.
+
+NOTE: I have took out the gmail password out of the conf/environment/development.rb file but will you wil
+need to sign up to use some of the features (although the email address can be made up, you can also
+use an existing Gmail address in which the Devise gem will send reset password links to.
