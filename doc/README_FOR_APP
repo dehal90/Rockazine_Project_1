@@ -1,0 +1,13 @@
+This is my final year project I created whilst doing my degree in ICT with Business at
+the University of Bradford. Although it was meant to be based on the Rock music scene
+up in Northern England, I decided that the importance of Ruby on Rails should be taken
+in to more consideration so I just included random content. It has many greate features such as
+the admin page which can be accessed if the 'jetinder?' method is true along with the 
+access method which controls access to edit and destroy pages depending on the 'jetinder?' method
+in the Application controller. 
+
+Features of this project include a sign up, log in, log out and forgot password (in which
+an email gets sent to a Gmail account)product catalogue, articles page with comments, 
+contact form  and a static downloads page is included to demonstrate how static pages
+are created in the MVC architecture of Rails. Other than the pages that have been stated, 
+This project also includes pagination and images in the product catalogue.

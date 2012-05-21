@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    
+<title>rockazine</title>
+<style type="text/css">
+body {background-image:url('backgroundrockazine.png');}
+</style>
+ <%= stylesheet_link_tag    "application" %>
+  <%= stylesheet_link_tag    "messages" %>
+
+   
+ <%= csrf_meta_tag %>
+  </head>
+ <body>
+   
+     <img src="/images/rockalogo.png" alt="logo" />
+
+        <div id= "navbar">     
+
+        	<div id= "holder">      
+        <ul> 
+        <li><h2><%= link_to "News", posts_path %></h2></li>
+        <li><h2><%= link_to "Store", product_stores_path %></h2></li>
+        <li><h2><%= link_to "Downloads", downloads_path %></h2></li> 
+        <li><h2><%= link_to "Contact", contact_path %></h2></li> 
+
+   </div>   <!--  end holder div -->
+   </div>   <!-- end navbar div -->
+   
+   
+ <div id="container">
+ 	
+<img src="/images/rockguitar.png" width="80" height="80" alt="guitar" /><img src="/images/amp.png" width="80" height="80" alt="amp" /><img src="/images/drum.png" width="80" height="100" alt="drum" />
+<img src="/images/tamb.png" width="80" height="80" alt="tamb" />
+ </p>
+ 	         
+    <% if user_signed_in? %> 
+                    <span id="currentuser"><%= current_user.email %></span>
+                    &nbsp;
+                   <%= link_to "My Profile", edit_user_registration_path %>
+                        <%= link_to "Sign out", destroy_user_session_path %>
+                <% else %> 
+                    <%= link_to "Sign up", new_user_registration_path %>
+                    or 
+                   <%= link_to "Sign in", new_user_session_path %>
+                <% end %> 
+
+ <% flash.each do |name, msg| %>
+     
+  <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    
+  <% end %>
+      
+<%= yield %>
+  </div>
+</body>
+
+</html>
+
+    
+ 

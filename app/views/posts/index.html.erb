@@ -1,0 +1,31 @@
+<h1>Listing posts</h1>
+
+<%= form_tag posts_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :title => nil %>
+  </p>
+<% end %>
+
+
+
+<% @posts.each do |post| %>
+  
+    <p><strong><%= post.title %> </strong></p>
+    <%= post.published_at %>
+    
+    <%= link_to 'Show', post %>
+        <% if jetinder? %>
+
+    <%= link_to 'Edit', edit_post_path(post) %>
+    <%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></td>
+  <% end %>
+  
+  </p>
+<% end %>
+
+<br />
+        <% if jetinder? %>
+
+<%= link_to 'New Post', new_post_path %>
+<% end %>

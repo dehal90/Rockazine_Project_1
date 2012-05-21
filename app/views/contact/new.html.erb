@@ -1,0 +1,26 @@
+
+ <H1>Contact Us </H1>
+
+<%= form_for @message, :url => contact_path do |form| %>
+<p>
+      <%= form.label :name %>
+      <%= form.text_field :name %>
+    </p>
+ 
+      <%= form.label :email %>
+      <%= form.text_field :email %>
+    <p>
+      <%= form.label :subject %>
+      <%= form.text_field :subject %>
+    </p>
+ 
+ <p>body </p>
+ 
+    <p> 
+      <%= form.text_area :body %>
+</p>
+ 
+  <fieldset class="actions">
+    <%= form.submit "Send" %>
+  </fieldset>
+<% end %>
