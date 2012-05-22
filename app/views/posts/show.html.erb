@@ -16,6 +16,7 @@
 <% end %>
 
 <h2>comments on this post</h2>
+<div id= "commentdiv">
 
 <% @post.comments.each do |comment| %>
 
@@ -23,7 +24,8 @@
 
 <p> <%= time_ago_in_words comment.created_at %> ago</p>
         <% end %>
-        
+                        </div>
+
          <% if jetinder? %>
 
  <p><%= link_to "delete comment", [@post, comment, :method => :delete, :confirm => "are you sure?"] %></p>
